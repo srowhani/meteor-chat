@@ -1,0 +1,17 @@
+<template name='layout'>
+		<head>
+			<link rel='icon' href='/public/favicon.ico'>
+			<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+		</head>
+		{{>yield}}
+</template>
+
+<template name='main'>
+	<audio id='notification' src='notification.wav' preload></audio>
+
+	{{#if rwindow.screen 'lt' 'small'}}
+		{{>mobile}}
+	{{else}}
+		{{>desktop}}
+	{{/if}}
+</template>

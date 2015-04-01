@@ -1,0 +1,30 @@
+<template name='mobile'>
+	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, user-scalable=no">
+	<div class='snap-drawers'>
+		<div class='snap-drawer snap-drawer-left'>
+			<div style='padding:0px 0px 0px 0px' id='messages' class='panel messages-mobile'>
+				{{>messages}}
+			</div>
+		</div>
+	</div>
+
+	<div style='background-color:white; display:block' class='chatbox snap-content' id='mobile'>
+		{{#if user}}
+			<div class='wrapper'>
+				{{>navbar}}
+				<div class='content'>
+					{{>contactModal}}
+					<br/>
+					{{>talk}}
+					{{>chat}}
+					<br/>
+				</div>
+			</div>
+			<div class='footer'>
+				{{>input}}
+			</div>
+			{{else}}
+				{{>login}}
+		{{/if}}
+	</div>
+</template>

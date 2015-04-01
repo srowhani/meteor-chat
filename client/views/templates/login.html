@@ -1,0 +1,25 @@
+<template name='login'>
+  <div id='login' class='panel' style='margin-right:auto;margin-left:auto;padding-top:20%'>
+    <form data-abide>
+      <h1>meteor-chat</h1>
+      <div>
+        <label for='user'>Username</label>
+        <input id='user' type='text' placeholder='' required/>
+      </div>
+      <div>
+        <label for='pass'>Password</label>
+        <input id='pass' type='password' required/>
+      </div>
+      <br/>
+      <div>
+      <div style='display:inline;padding-left:5%'>
+        <input {{disabled}} type='submit' class='button success' value='Login' />
+      </div>
+      <div style='float:right;padding-right:5%'>
+        <input  id='createUser' type='button' class='button' value='Create Account' />
+      </div>
+    </div>
+    <div id='err'></div>
+    </form>
+  </div>
+</template>

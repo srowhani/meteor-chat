@@ -1,0 +1,27 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "foundation": {},
+      "foundation-icons-general": {},
+      "spin": {}
+    },
+    "packages": {
+      "foundation": {
+        "git": "https://github.com/ewall/meteor-foundation.git",
+        "tag": "v5.4.0",
+        "commit": "19b30241d4dfc8899163c6c15f79ab79bf11f959"
+      },
+      "foundation-icons-general": {
+        "git": "https://github.com/IainShigeoka/meteor-foundation-icons-general.git",
+        "tag": "v1.0.1",
+        "commit": "0d16dc77ffb76180d63dcbc58716bd1dbf7d66d5"
+      },
+      "spin": {
+        "git": "https://github.com/SachaG/meteor-spin.git",
+        "tag": "v2.0.4",
+        "commit": "f7b1e12a7caff1283cdb3671a393c182d0ae9862"
+      }
+    }
+  }
+}

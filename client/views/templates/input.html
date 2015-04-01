@@ -1,0 +1,43 @@
+<template name='input'>
+    <div class='input-mobile'>
+        <input {{disable}} type='text' id='r' placeholder='Send a message' />
+        <div class='input-overlay'>
+            <a {{disable}} data-reveal-id='encryptModal' onclick="$(window).trigger('resize');
+    " class='general foundicon-lock'></a>
+            {{>encryptModal}}
+            <a {{disable}} data-reveal-id='attatchModal' class='general foundicon-paper-clip'></a>
+        </div>
+        <div id="attatchModal" class="reveal-modal" data-reveal>
+            <h2>Attatch a file</h2>
+            <div style='min-height:150px; min-width;100%;' class='drop'></div>
+            <input id='file' type='file' multiple/>
+            <input type='submit' class='button' value='Upload!' />
+            <a class="close-reveal-modal">&#215;</a>
+        </div>
+    </div>
+</template>
+<template name='encryptModal'>
+    <div id="encryptModal" style='overflow-y:auto' class="reveal-modal" data-reveal>
+        <form class='f'>
+            <fieldset>
+                <legend>Send an Encrypted Message</legend>
+                <label for='message'>Message:</label>
+                <textarea id='t_m' rows='4' cols='5'></textarea>
+                <label for='pass'>Password:</label>
+                <input type='password' name='pass' id='t_p' />
+                <input type='submit' id='enc' class='button success et' value='Encrypt' />
+            </fieldset>
+        </form>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+</template>
+<template name='decryptModal'>
+    <div id="decryptModal" style='overflow-y:auto' class="reveal-modal" data-reveal>
+        <div style='width:60%'>
+            <h5>Password:</h5>
+            <input type='password' id='pswd' />
+            <input type='button' id='psd' value='Decrypt' />
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+</template>

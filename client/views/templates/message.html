@@ -1,0 +1,27 @@
+<template name='message'>
+  <div class='{{bubble}}'>
+
+    <strong>{{author}}</strong>
+    {{#if encrypted}}
+    <a style='color:black' class='general foundicon-lock'></a>{{/if}}
+
+    <br/>
+    <small>{{timestamp}}</small>
+    <div class='mc' style='padding-left:10px'>
+      {{#if encrypted}}
+      <a class='encrypted' style='color:black'><pre>Encrypted Message</pre></a>
+      {{else}} {{{textContent}}} {{/if}}
+    </div>
+    <div class='attatchments'>
+      {{#if attatchments}}
+        <strong>Attatchments</strong>
+        <ul>
+          {{#each attatchments}}
+          <li>{{download}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+
+    </div>
+  </div>
+</template>

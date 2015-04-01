@@ -1,0 +1,10 @@
+<template name='logout'>
+	<ul class='dropdown'>
+		<li>
+			<a href='settings'>Account Settings</a>
+		</li>
+		<li>
+			<a onclick='Meteor.logout();location.replace("/")' href='chat'>Logout</a>
+		</li>
+	</ul>
+</template>

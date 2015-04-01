@@ -1,0 +1,30 @@
+<template name='messages'>
+
+	{{#each conversation}}
+		<div style='padding : 2%' class='message {{selected}}' data-id='{{_id}}' tabindex={{tabIndex}}>
+			<strong>{{name}}</strong>
+			<div class='right'>
+				<small>{{timestamp}}</small>
+				<br/>
+				{{#if count}}
+				<small style='vertical-align: 5px'>{{countStr}}</small>
+				{{/if}}
+			</div>
+			<br/>
+			<small style='font-family:monospace'>{{repr}}</small>
+
+		</div>
+	{{/each}}
+</template>
+ <!--
+var Conversation = (function(senderId, toId, messageList, isRead){
+	return{
+		senderId: senderId, //sender
+		toId : toId, //reciever
+		messages : messageList, //list of messages
+		unread   : 0, //number of unread messages
+		isRead : isRead, //green indicating read
+		created : new Date().toUTCString()
+	}
+})
+ -->

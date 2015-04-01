@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "foundation": {},
+    "foundation-icons-general": {},
+    "spin": {},
+    "crypto-sha256": {}
+  }
+}

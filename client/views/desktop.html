@@ -1,0 +1,31 @@
+<template name='desktop'>
+  {{>navbar}}
+  {{#if currentUser}}
+  <div class='chatbox'>
+    <div class='content'>
+      <div class='row'>
+        <!-- Sidebar -->
+        {{>contactModal}}
+        <br/>
+        <div id='messages' style='margin-bottom:0px' class='panel small-3 columns messages-desktop'>
+          {{>messages}}
+        </div>
+        <!-- Main Content -->
+        <div style='padding : 0px' class='small-9 columns'>
+          <div id='includes' class=''>
+            {{>talk}}
+          </div>
+          <div id='chat' style='min-height:328px; max-height:328px' class='row chatbox desktop'>
+            {{>chat}}
+          </div>
+          {{>input}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{else}}
+    <div style='width:50%; padding-left:5%'>
+      {{>login}}
+    </div>
+  {{/if}}
+</template>

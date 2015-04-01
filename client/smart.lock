@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "purecss": {}
+    },
+    "packages": {
+      "purecss": {
+        "git": "https://github.com/MikkoVirenius/meteor-purecss.git",
+        "tag": "v0.5.0",
+        "commit": "9940744ed639683a1815c5a81b2b745e493fad18"
+      }
+    }
+  }
+}
